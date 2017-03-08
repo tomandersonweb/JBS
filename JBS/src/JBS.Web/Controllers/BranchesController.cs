@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using JBS.Core.Repositories;
 using JBS.Persistence.StaticFile.Repositories;
+using JBS.Core.Entities;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -39,19 +36,16 @@ namespace JBS.Web.Controllers
 
             var branch = _branchesRepo.GetBranch(id);
 
-            if (branch == null)
-                return NotFound();
-
             return Ok(branch);
         }
 
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Branch value)
         {
         }
 
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Branch value)
         {
         }
 

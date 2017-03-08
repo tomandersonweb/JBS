@@ -10,7 +10,7 @@
         };
 
         function getBranches() {
-            return $http.get(config.baseUri + '/branches')
+            return $http.get(config.uri.api + 'branches')
                 .then(function (response) {
                     return response.data;
                 })
@@ -20,7 +20,7 @@
         }
 
         function getBranch(id) {
-            return $http.get(config.systemMonitoring.baseUri + 'api/branches/')
+            return $http.get(config.uri.api + 'branches/' + id)
                 .then(function (response) {
                     return response.data;
                 })

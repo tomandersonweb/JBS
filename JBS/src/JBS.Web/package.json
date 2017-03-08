@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-inject": "4.1.0",
+    "stream-series": "0.1.1",
+    "wiredep": "4.0.0"
+  },
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-watch": "^1.0.5",
+    "gulp-buster": "^1.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tom Anderson",
+  "license": "",
+  "description": ""
+}

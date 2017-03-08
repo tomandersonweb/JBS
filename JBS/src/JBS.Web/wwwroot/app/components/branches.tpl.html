@@ -1,0 +1,19 @@
+﻿<div style="width:850px">
+    <div style="float:left; width: 400px">
+        <h3>Search</h3>
+        <p>Search for an individual branch number:</p>
+        <input type="number" name="search" id="search" ng-model="srch" min="1" />
+        <button type="button" ng-click="model.getBranch(srch)">Search</button>
+    </div>
+    <div style="width:400px; float:left">
+        <h3>Search Results</h3>
+        <ul ng-hide="angular.isUndefined(model.branches)">
+            <li class="result" ng-repeat="branch in model.branches">
+                {{branch.number ? branch.number : 'No results' }} - {{branch.name}}
+                <ul>
+                    <li ng-repeat="specialism in branch.specialisms">{{specialism.name}} {{specialism.description}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
