@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <script src="~/dist/scripts/system-monitoring.min.js"></script>
+    <script src="~/dist/scripts/doc-portal.min.js"></script>
+    <script src="~/dist/scripts/root-components.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+
+    <app></app>
+
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+    <script type="text/javascript">
+        config = config || {};
+
+        config.uri = {
+            base: 'http://localhost:3000/',
+            root: window.location.origin + window.location.pathname + '/app',
+        };
+
+        $(document).ready(function () {
+            startApp();
+        });
+
+        function startApp() {
+            angular.bootstrap(document, ["app"]);
+        }
+    </script>
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- inject:js -->
+    <!-- endinject -->
+</body>
+</html>
